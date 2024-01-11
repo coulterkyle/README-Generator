@@ -110,7 +110,7 @@ function renderLicenseSection(license) {
 
 //function to generate markdown for README
 function generateMarkdown(data) {
-return `#${data.title}\n
+return `# ${data.title}\n
 ${renderLicenseSection(data.license)}\n
 ## Description\n
 ${data.description}\n
