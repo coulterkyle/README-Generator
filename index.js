@@ -1,10 +1,9 @@
-// TODO: Include packages needed for this application
+//packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
-//const { makeBadge, ValidationError } = require('badge-maker')
 
-// TODO: Create an array of questions for user input
+//array of questions for user input
 inquirer
     .prompt([
         {
@@ -144,7 +143,7 @@ inquirer
         }
     ])
 
-// TODO: Create a function to write README file
+//function to write README.md file or display error
 .then((data) => {
     const fileName = 'README.md'
     fs.writeFile(fileName, generateMarkdown(data), (err) =>

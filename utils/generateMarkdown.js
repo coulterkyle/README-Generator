@@ -1,6 +1,5 @@
-
+//function takes in contents from generateMarkdown and loops through the array to produce table of contents
 function renderTableOfContents(contents) {
-  console.log(contents)
   let text = '';
   for (let i = 0; i < contents.length; i++) {
     text += `- [${contents[i]}](#${contents[i]})\n`;
@@ -8,8 +7,7 @@ function renderTableOfContents(contents) {
   return text;
 }
 
-
-
+//function produces switch that produces badge, button if applicable and link for license
 function renderLicenseSection(license) {
   const makeLicenseBadgeLink = (license)
   switch (makeLicenseBadgeLink) {
@@ -110,7 +108,7 @@ function renderLicenseSection(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+//function to generate markdown for README
 function generateMarkdown(data) {
 return `#${data.title}\n
 ${renderLicenseSection(data.license)}\n
@@ -144,9 +142,10 @@ ${data.contribute}\n
 ${data.tests}\n
 ## Questions\n
 https://github.com/${data.github}\n
+For questions regarding this app, contact me at:\n
 e-mail: ${data.email}
 `;
 }
 
-
+//module exports
 module.exports = generateMarkdown;
