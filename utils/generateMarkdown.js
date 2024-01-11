@@ -143,7 +143,7 @@ ${data.contribute}\n
 ## Tests\n
 ${data.tests}\n
 ## Questions\n
-github.com/${data.github}\n
+https://github.com/${data.github}\n
 e-mail: ${data.email}
 `;
 }
