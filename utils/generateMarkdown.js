@@ -139,7 +139,7 @@ ${data.badges}\n
 ## Features\n
 ${data.features}\n
 ## Contribute\n
-${data.contribute}
+${data.contribute}\n
 ## Tests\n
 ${data.tests}\n
 ## Questions\n
