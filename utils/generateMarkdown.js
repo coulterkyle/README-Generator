@@ -1,43 +1,19 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
 
-
-// If there is no license, return an empty string
-// function renderLicenseBadge(license) {
-//   if (license) {
-//     return `${license}`
-//   } else {
-//     return ''
-//   }
-// }
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {
-//   if (license) {
-//     return `https://opensource.org/licenses/${license}`
-//   } else {
-//     return ''
-//   }
-// }
-
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderTableOfContents(contents){
+function renderTableOfContents(contents) {
   console.log(contents)
   let text = '';
   for (let i = 0; i < contents.length; i++) {
-    text +=`- [${contents[i]}](#${contents[i]})\n`;
-  } 
+    text += `- [${contents[i]}](#${contents[i]})\n`;
+  }
   return text;
 }
 
 
 
 function renderLicenseSection(license) {
-    const makeLicenseBadgeLink = (license)
-    switch (makeLicenseBadgeLink){
-     case'No License':
+  const makeLicenseBadgeLink = (license)
+  switch (makeLicenseBadgeLink) {
+    case 'No License':
       return '';
       break;
     case 'Apache 2.0 License':
@@ -52,7 +28,7 @@ function renderLicenseSection(license) {
     case 'BSD 2-Clause License':
       return '[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)';
       break;
-    case 'CC0','Attribution 4.0 International':
+    case 'CC0', 'Attribution 4.0 International':
       return '[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)';
     case 'Attribution-ShareAlike 4.0 International':
       return '[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)\n[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)';
@@ -130,45 +106,45 @@ function renderLicenseSection(license) {
       return '[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)';
       break;
     case 'zlib/libpng License':
-    return '[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)';
-    }
+      return '[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)';
+  }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `#${data.Title}\n
+return `#${data.title}\n
 ${renderLicenseSection(data.license)}\n
-  ## Description\n
-  ${data.description}\n
-  ${data.motivation}\n
-  ${data.why}\n
-  ${data.solves}\n
-  ${data.lessons}\n
-  ## Table of Contents\n
+## Description\n
+${data.description}\n
+${data.motivation}\n
+${data.why}\n
+${data.solves}\n
+${data.lessons}\n
+## Table of Contents\n
 ${renderTableOfContents(data.tableOfContents)}\n
-  ## Installation\n
-  ${data.installation}\n
-  ## Useage\n
-  ${data.useage}\n
-  ${data.screenshots}\n
-  ## Credits\n
-  ${data.collaborators}\n
-  ${data.thirdParty}\n
-  ${data.tutorials}\n
-  ## License\n
-  ${data.license}\n
-  ${renderLicenseSection(data.license)}\n
-  ## Badges\n
-  ${data.badges}\n
-  ## Features\n
-  ${data.features}\n
-  ## How to Contribute\n
-  ${data.contribute}
-  ## Tests\n
-  ${data.tests}\n
-  ## Questions\n
-  github.com/${data.github}\n
-  e-mail${data.email}
+## Installation\n
+${data.installation}\n
+## Useage\n
+${data.useage}\n
+${data.screenshots}\n
+## Credits\n
+${data.collaborators}\n
+${data.thirdParty}\n
+${data.tutorials}\n
+## License\n
+${data.license}\n
+${renderLicenseSection(data.license)}\n
+## Badges\n
+${data.badges}\n
+## Features\n
+${data.features}\n
+## Contribute\n
+${data.contribute}
+## Tests\n
+${data.tests}\n
+## Questions\n
+github.com/${data.github}\n
+e-mail: ${data.email}
 `;
 }
 
