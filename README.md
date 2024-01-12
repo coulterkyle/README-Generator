@@ -34,7 +34,7 @@ Run "node index.js" under the index.js file. Make sure all of the proper extensi
 
 After you run the command prompt to start the app. You will be presented with a series of questions. The information you provide in your answers will be inserted into your README. Once completed, the app will confirm generation of your README file with "Success!" or give you the error code. Remember to install the proper extensions with running "npm install".
 
-[screenshot](./assets/images/screenshot.png)
+![screenshot](./assets/images/screenshot.png)
 
 ## Credits
 
